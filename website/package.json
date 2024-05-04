@@ -31,6 +31,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "http://KennanWong.github.io/Portfolio",
   "browserslist": {
     "production": [
       ">0.2%",
