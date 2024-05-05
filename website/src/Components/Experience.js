@@ -5,6 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Divider from '@mui/material/Divider';
 import CircleIcon from '@mui/icons-material/Circle';
 import { List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Desktop, Mobile } from "./Breakpoints";
 
 const Place = styled(Typography)({
     display: 'inline-block',
@@ -51,9 +52,46 @@ const Point = styled(Typography)({
 
 export default function Experience({place, position, fromYear, toYear, summaryPoints=[], url}) {
     return (
-        <Box sx={{ flexGrow: 1, padding: '50px'}}>
-            <Grid container spacing={1}>
-                <Grid item xs={6}>
+        <Box>
+            <Desktop>
+                <Box sx={{ flexGrow: 1, padding: '50px'}}>
+                    <Grid container spacing={1}>
+                        <Grid item xs={6}>
+                            <Box>
+                                <Box sx={{display:'flex', width: '100%', justifyContent: 'flex-start'}}>
+                                    <Place onClick={() => {
+                                        if (url.length != 0) {
+                                            window.open(url)
+                                        }
+                                    }}>
+                                        {place}
+                                    </Place>
+                                </Box>
+                                <Box sx={{display: 'flex', flexDirection: 'row', gap: '10px'}}>
+                                    <Position>
+                                        {position}
+                                    </Position>
+                                    <Divider orientation="vertical" flexItem />
+                                    <Date>
+                                        {fromYear} - {toYear}
+                                    </Date>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Box sx={{display: 'flex', gap: '20px', flexDirection: 'column', paddingTop: '15px'}}>
+                                {summaryPoints.map((point, key) => (
+                                    <Point>
+                                        {point}    
+                                    </Point>
+                                ))}
+                            </Box> 
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Desktop>
+            <Mobile>
+                <Box sx={{display: 'flex', flexDirection: 'column', gap: '10px', padding: '15px'}}>
                     <Box>
                         <Box sx={{display:'flex', width: '100%', justifyContent: 'flex-start'}}>
                             <Place onClick={() => {
@@ -64,7 +102,6 @@ export default function Experience({place, position, fromYear, toYear, summaryPo
                                 {place}
                             </Place>
                         </Box>
-                        
                         <Box sx={{display: 'flex', flexDirection: 'row', gap: '10px'}}>
                             <Position>
                                 {position}
@@ -75,8 +112,6 @@ export default function Experience({place, position, fromYear, toYear, summaryPo
                             </Date>
                         </Box>
                     </Box>
-                </Grid>
-                <Grid item xs={6}>
                     <Box sx={{display: 'flex', gap: '20px', flexDirection: 'column', paddingTop: '15px'}}>
                         {summaryPoints.map((point, key) => (
                             <Point>
@@ -84,8 +119,9 @@ export default function Experience({place, position, fromYear, toYear, summaryPo
                             </Point>
                         ))}
                     </Box> 
-                </Grid>
-            </Grid>
+                </Box>
+
+            </Mobile>
         </Box>
     )
 }

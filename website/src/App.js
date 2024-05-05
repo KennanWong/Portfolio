@@ -14,8 +14,6 @@ const IntroText = styled('div')({
 })
 
 const PaneColumn = styled(Box) ({
-  paddingRight: '10px',
-  paddingLeft: '10px',
   width: "100%",
   maxWidth: '1500px'
 })
