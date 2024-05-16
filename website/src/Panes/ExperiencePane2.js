@@ -44,7 +44,7 @@ export default function ExperiencePane2({scrollToDivStart}) {
         <Box sx={{width:'100%', height: '100vh', paddingTop: '60px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
           <Box sx={{display: 'flex', flexDirection: 'column', gap: '60px', paddingTop: '100px'}}>
             <AboutMe>
-              I'm software engineer looking to build robust solutions and intuitive interfaces to elevate user experiences.
+              I'm a software engineer looking to build robust solutions and intuitive interfaces to elevate user experiences.
             </AboutMe>
             <Experiences>
               {experienceDetails.map((experience, key) => (
