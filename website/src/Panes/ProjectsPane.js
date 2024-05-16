@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, styled } from '@mui/material'
 import * as React from 'react'
 import Project from '../Components/Project'
 import { ProjectDetails } from '../Data/ProjectDetails'
@@ -6,6 +6,18 @@ import { Desktop, Mobile } from '../Components/Breakpoints'
 
 
 export default function ProjectPane({scrollToDivStart}) {
+
+    const ProjectBox = styled(Box)({
+        display: 'flex', 
+        flexWrap: 'wrap', 
+        justifyContent: 'flex-start', 
+        gap:'40px', 
+        width: '100%', 
+        alignItems: 'center',
+        transition: 'all .2s ease-in',
+        height: '400px'
+    })
+
     return (
         <Box>
             <Desktop>
@@ -13,11 +25,11 @@ export default function ProjectPane({scrollToDivStart}) {
                     <Typography sx={{fontWeight: '900', fontSize: 48, textAlign: 'left', paddingTop: '60px'}}>
                         Projects.
                     </Typography>
-                    <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', gap:'40px', width: '100%'}}>
+                    <ProjectBox>
                         {ProjectDetails.map((project, key) => (
                             <Project key={key} language={project.language} title={project.title} description={project.description} year={project.year} url={project.url}/>
                         ))}
-                    </Box>
+                    </ProjectBox>
                 </Box>
             </Desktop>
             <Mobile>
