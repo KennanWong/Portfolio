@@ -11,17 +11,18 @@ const ProjectBox = styled(Box)(({show}) => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     transition: 'all .3s ease-out',
-    width: show ? '88vh': '80vw',
-    height: show ? '44vh': '40vh',
+    width: show ? '99%': '90%',
+    height: show ? '55vh': '50vh',
     backgroundColor: show ? "#ECEBE4": '#DADDD8',
     opacity: show ? '1': '.6',
     borderRadius: show ? '8px':'6px',
     boxShadow: show ? 'rgb(218, 221, 216)' : 'none',
+    paddingBottom: '30px'
 }))
 
 const DescriptionBox = styled(Box)({
-    width: "352px",
-    height: "85px",
+    width: "100%",
+    height: "15vh",
 })
 
 const Title = styled(Typography)({
@@ -51,7 +52,7 @@ export default function ProjectMobile({language, title, description, year, url, 
             <Typography id={"language"} sx={{fontSize: "32px", fontWeight: "900", color: "#BBBBBB", textAlign: 'left'}}>
                 {language}
             </Typography>
-            <Box sx={{width: '100%', height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'center', transition: 'all 100s ease-out', gap: '10px'}}>
+            <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', transition: 'all 100s ease-out', gap: '10px'}}>
                 <Title sx= {{
                         fontSize: active ? '35px' : '45px',
                     }}
@@ -71,8 +72,9 @@ export default function ProjectMobile({language, title, description, year, url, 
                             sx={{color: '#1C1C1C', fontFamily: 'monospace'}}
                             onClick={() => {
                                 window.open(url)
+                                console.log('Hello')
                             }}
-                            endIcon={<OpenInNewIcon sx={{fontSize: active ? '30px' : '0px', transition: 'font-size 0.2s ease-out', textAlign: 'right'}}/>}
+                            endIcon={<OpenInNewIcon sx={{fontSize: '30px'}}/>}
                         >
                             View Repo
                         </Button>

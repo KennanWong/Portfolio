@@ -59,8 +59,8 @@ export default function ContactButton({show}) {
 				ariaLabel="SpeedDial basic example"
 				sx={{ 
 					position: 'fixed', 
-					bottom: 50, 
-					right: 50,
+					bottom: 20, 
+					right: 20,
 					opacity: show ? 1: 0,
 					transition: 'all 0.2s ease-in-out'
 				}}
