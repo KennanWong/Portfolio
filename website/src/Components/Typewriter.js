@@ -26,7 +26,7 @@ const useTypewriter = (text, speed = 30) => {
 const Text = styled(Typography)({
     letterSpacing: '.15em',
     fontFamily: 'monospace',
-    color: "#000000",
+    color: "#1C1C1C",
     textAlign: 'left'
 })
 

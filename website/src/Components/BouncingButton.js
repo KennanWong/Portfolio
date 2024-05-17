@@ -6,7 +6,7 @@ const ArrowDown = styled(ArrowDownwardIcon)({
     color:'rgba(234, 240, 246, 0.2)',
     transition: 'all 0.2s ease-in-out',
     ":hover": {
-        color: "#FFFFFF",
+        color: "#ECEBE4",
         transform: "scale(1.2)",
         "-webkit-animation-name": "none",
         shadow: 'rgb(38, 57, 77) 0px 20px 30px -10px',

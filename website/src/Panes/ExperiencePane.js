@@ -11,7 +11,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import BouncingButton from '../Components/BouncingButton';
 
 const AboutMe = styled(Box)({
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#ECEBE4",
     textAlign: "start",
     display: "flex",
     color: "#1D1F22",
@@ -27,7 +27,7 @@ const AboutMe = styled(Box)({
 })
 
 const Experiences = styled('div')({
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#ECEBE4",
     gap:  '50px',
     padding: '10px',
     display: 'flex',

@@ -20,20 +20,12 @@ export default function SocialsBar({}) {
     return (
         <SocialsBarContainer>
             <IconHolder>
-                <IconButton>
-                    <LinkedInIcon sx={{fontSize: 50, color: '#FFFFFF'}} 
-                        onClick={() => {
-                            window.open("https://www.linkedin.com/in/kennanw/")
-                        }}
-                    />
+                <IconButton onClick={() => {window.open("https://www.linkedin.com/in/kennanw/")}}>
+                    <LinkedInIcon sx={{fontSize: 50, color: '#ECEBE4'}} />
                 </IconButton>
                 <Divider orientation="vertical" flexItem/>
-                <IconButton>   
-                    <GitHubIcon sx={{fontSize: 50, color: '#FFFFFF'}} 
-                        onClick={() => {
-                            window.open("https://github.com/KennanWong")
-                        }}
-                    />
+                <IconButton onClick={() => {window.open("https://github.com/KennanWong")}}>   
+                    <GitHubIcon sx={{fontSize: 50, color: '#ECEBE4'}} />
                 </IconButton>
             </IconHolder>
         </SocialsBarContainer>

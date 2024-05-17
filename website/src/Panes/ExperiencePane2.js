@@ -14,7 +14,7 @@ import { Desktop, Mobile } from '../Components/Breakpoints';
 const AboutMe = styled(Box)({
     textAlign: "start",
     display: "flex",
-    color: "#FFFFFF",
+    color: "#ECEBE4",
     font: "Roboto",
     fontWeight: "bold",
     fontSize: "40px",
@@ -26,7 +26,7 @@ const AboutMe = styled(Box)({
 })
 
 const Experiences = styled('div')({
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#ECEBE4",
     gap:  '50px',
     padding: '10px',
     display: 'flex',
@@ -41,7 +41,7 @@ export default function ExperiencePane2({scrollToDivStart}) {
   return (
     <Box>
       <Desktop>
-        <Box sx={{width:'100%', height: '100vh', paddingTop: '60px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+        <Box sx={{width:'100%', height: '100vh', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
           <Box sx={{display: 'flex', flexDirection: 'column', gap: '60px', paddingTop: '100px'}}>
             <AboutMe>
               I'm a software engineer looking to build robust solutions and intuitive interfaces to elevate user experiences.
@@ -53,7 +53,7 @@ export default function ExperiencePane2({scrollToDivStart}) {
                 
             </Experiences>
           </Box>
-          <Box sx={{height: '60px', display:'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingBottom: '100px'}}>
+          <Box sx={{height: '60px', marginBottom: '5rem', display:'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
               <BouncingButton scrollToDiv={scrollToDivStart} text={"My Projects"}/>
           </Box>
         </Box>

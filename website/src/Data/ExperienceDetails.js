@@ -7,7 +7,7 @@ export const experienceDetails = [
         "toYear": "Present",
         "summaryPoints": [
             "Working on NAB Data Hub, an enterprise data lake in the cloud",
-            "Lead cloud cost optimisation initiatives resulting in $15000 annually",
+            "Lead cloud cost optimisation initiatives resulting in $120000 annually",
             "Maintained and uplifted capabilities to meet changing business requirements"
         ],
         "url": "https://www.nab.com.au/",

@@ -1,7 +1,7 @@
 export const ProjectDetails = [
     {
         "language": "Java Script",
-        "title": "Event Management System",
+        "title": "Event Manager System",
         "description": "User interface to enable event goers to purchase tickets",
         "year": "2022",
         'url': 'https://github.com/KennanWong/Tickr-Capstone-Project'

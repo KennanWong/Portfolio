@@ -10,7 +10,7 @@ import { Desktop, Mobile } from "./Breakpoints";
 const Place = styled(Typography)({
     display: 'inline-block',
     textAlign: "start",
-    color: "#1D1F22",
+    color: "#1C1C1C",
     font: "Roboto",
     fontWeight: "bold",
     fontSize: "24pt",
@@ -81,7 +81,7 @@ export default function Experience({place, position, fromYear, toYear, summaryPo
                         <Grid item xs={6}>
                             <Box sx={{display: 'flex', gap: '20px', flexDirection: 'column', paddingTop: '15px'}}>
                                 {summaryPoints.map((point, key) => (
-                                    <Point>
+                                    <Point key={key}>
                                         {point}    
                                     </Point>
                                 ))}
@@ -114,7 +114,7 @@ export default function Experience({place, position, fromYear, toYear, summaryPo
                     </Box>
                     <Box sx={{display: 'flex', gap: '20px', flexDirection: 'column', paddingTop: '15px'}}>
                         {summaryPoints.map((point, key) => (
-                            <Point>
+                            <Point key={key}>
                                 {point}    
                             </Point>
                         ))}
