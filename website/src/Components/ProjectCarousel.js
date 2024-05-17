@@ -31,7 +31,6 @@ export default function ProjectCarousel() {
         style={{
             "--swiper-pagination-color": "#52796F",
             "--swiper-pagination-bullet-inactive-color": "#999999",
-            
         }}
       >
         {ProjectDetails.map((project, key) => (
