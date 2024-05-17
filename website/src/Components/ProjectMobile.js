@@ -1,4 +1,4 @@
-import { Box, Typography, styled } from '@mui/material'
+import { Box, Button, Typography, styled } from '@mui/material'
 import * as React from 'react'
 import Typewriter from './Typewriter'
 import IconButton from '@mui/material/IconButton';
@@ -11,8 +11,8 @@ const ProjectBox = styled(Box)(({show}) => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     transition: 'all .3s ease-out',
-    width: show ? '407px': '370px',
-    height: show ? '352px': '320px',
+    width: show ? '88vh': '80vw',
+    height: show ? '44vh': '40vh',
     backgroundColor: show ? "#ECEBE4": '#DADDD8',
     opacity: show ? '1': '.6',
     borderRadius: show ? '8px':'6px',
@@ -42,9 +42,7 @@ const BottomBar = styled(Box)({
     height: '30px'
 })
 
-const GrowingButton = styled(IconButton)({
-    transition: 'font-size 0.4s ease-out',
-})
+
 
 
 export default function ProjectMobile({language, title, description, year, url, active}) {
@@ -64,23 +62,28 @@ export default function ProjectMobile({language, title, description, year, url, 
                     <Typewriter text={description} hovering={active}/>
                 </DescriptionBox>
             </Box>
-            <BottomBar>
-                <Typography sx={{fontSize: "20px", fontWeight: "medium", color: "#1C1C1C", textAlign: 'left'}}>
-                    {year}
-                </Typography>
-                <Tooltip title="Checkout the repo">
-                    <GrowingButton 
-                        sx={{display: (url.length != 0) ? 'flex' : 'none'}}
-                        onClick={() => {
-                            if (url.length != 0) {
+            {(url.length != 0)
+                ?   <BottomBar>
+                        <Typography sx={{fontSize: "20px", fontWeight: "medium", color: "#1C1C1C", textAlign: 'left'}}>
+                            {year}
+                        </Typography>
+                        <Button 
+                            sx={{color: '#1C1C1C', fontFamily: 'monospace'}}
+                            onClick={() => {
                                 window.open(url)
-                            }
-                        }}
-                    >
-                        <OpenInNewIcon sx={{fontSize: active ? '30px' : '0px', transition: 'font-size 0.2s ease-out', textAlign: 'right'}}/>
-                    </GrowingButton>
-                </Tooltip>
-            </BottomBar>
+                            }}
+                            endIcon={<OpenInNewIcon sx={{fontSize: active ? '30px' : '0px', transition: 'font-size 0.2s ease-out', textAlign: 'right'}}/>}
+                        >
+                            View Repo
+                        </Button>
+                    </BottomBar>
+                :   <BottomBar>
+                        <Typography sx={{fontSize: "20px", fontWeight: "medium", color: "#1C1C1C", textAlign: 'left'}}>
+                            {year}
+                        </Typography>
+                    </BottomBar>
+            }
+            
         </ProjectBox>
     )
 }

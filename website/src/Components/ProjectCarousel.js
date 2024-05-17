@@ -14,11 +14,10 @@ import {ProjectDetails} from '../Data/ProjectDetails'
 // import required modules
 import { Pagination, EffectCards } from 'swiper/modules';
 import ProjectMobile from './ProjectMobile';
-import { Box } from '@mui/material';
 
 export default function ProjectCarousel() {
   return (
-    <Box>
+    <>
       <Swiper
         slidesPerView={'1.1'}
         centeredSlides={true}
@@ -27,7 +26,7 @@ export default function ProjectCarousel() {
           clickable: true,
         }}
         effect={'coverflow'}
-        modules={[Pagination, EffectCards]}
+        modules={[Pagination]}
         className="mySwiper"
         style={{
             "--swiper-pagination-color": "#52796F",
@@ -42,6 +41,6 @@ export default function ProjectCarousel() {
             </SwiperSlide>
         ))}
       </Swiper>
-    </Box>
+    </>
   );
 }

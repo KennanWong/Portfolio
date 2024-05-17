@@ -47,7 +47,7 @@ export default function ProjectPane({scrollToDivStart}) {
                     <Typography sx={{fontWeight: '900', fontSize: 48, textAlign: 'left', paddingTop: '60px'}}>
                         Projects.
                     </Typography>
-                    <Box sx={{height: '500px', width: '100%'}}>
+                    <Box sx={{width: '100%'}}>
                         <ProjectCarousel/>
                     </Box>
                 </Box>
