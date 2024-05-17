@@ -15,8 +15,8 @@ export const ProjectDetails = [
     },
     {
         "language": "Java Script",
-        "title": "Accommodation Rental Website",
-        "description": "Frontend SPA in React JS to enable users to book accomadation similar to AirBnB",
+        "title": "AirBrb",
+        "description": "Frontend SPA in ReactJS to enable users to book accomadation similar to AirBnB",
         "year": "2021",
         'url': ''
     },

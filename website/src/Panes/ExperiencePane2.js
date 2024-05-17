@@ -39,9 +39,9 @@ const Experiences = styled('div')({
 
 export default function ExperiencePane2({scrollToDivStart}) {
   return (
-    <Box>
+    <Box >
       <Desktop>
-        <Box sx={{width:'100%', height: '100vh', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+        <Box sx={{width:'100%', height: '100vh', display: 'flex', justifyContent: 'space-between', flexDirection: 'column', scrollSnapAlign: 'start'}}>
           <Box sx={{display: 'flex', flexDirection: 'column', gap: '60px', paddingTop: '100px'}}>
             <AboutMe>
               I'm a software engineer looking to build robust solutions and intuitive interfaces to elevate user experiences.
@@ -52,9 +52,6 @@ export default function ExperiencePane2({scrollToDivStart}) {
               ))}
                 
             </Experiences>
-          </Box>
-          <Box sx={{height: '60px', marginBottom: '5rem', display:'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
-              <BouncingButton scrollToDiv={scrollToDivStart} text={"My Projects"}/>
           </Box>
         </Box>
       </Desktop>

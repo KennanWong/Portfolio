@@ -35,7 +35,7 @@ const Title = styled(Typography)({
     fontWeight: "900", 
     color: "#1C1C1C", 
     textAlign: 'left',
-    transition: 'font-size 0.2s ease-out    , line-height 0.3s ease-out',
+    transition: 'font-size 0.2s ease-in',
     width: "100%",
     lineHeight: '1.5'
     
@@ -67,7 +67,7 @@ export default function ProjectDesktop({language, title, description, year, url}
             </Typography>
             <Box sx={{width: '320px', height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'center', transition: 'all 100s ease-out', gap: '10px'}}>
                 <Title sx= {{
-                        fontSize: hovering ? '35px' : '45px',
+                        fontSize: hovering ? '38px' : '45px',
                     }}
                 >
                     {title}

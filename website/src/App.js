@@ -9,7 +9,8 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const PaneColumn = styled(Box) ({
   width: "100%",
-  maxWidth: '1500px'
+  maxWidth: '1500px',
+  scrollSnapType: 'y mandatory'
 })
 
 const theme = createTheme({

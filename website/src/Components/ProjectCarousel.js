@@ -19,13 +19,12 @@ export default function ProjectCarousel() {
   return (
     <>
       <Swiper
-        slidesPerView={'1.1'}
+        slidesPerView={'1.2'}
         centeredSlides={true}
-        spaceBetween={10}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
-        effect={'coverflow'}
         modules={[Pagination]}
         className="mySwiper"
         style={{

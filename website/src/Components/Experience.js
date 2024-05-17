@@ -92,7 +92,7 @@ export default function Experience({place, position, fromYear, toYear, summaryPo
             </Desktop>
             <Mobile>
                 <Box sx={{display: 'flex', flexDirection: 'column', gap: '10px', padding: '15px'}}>
-                    <Box>
+                    <Box sx ={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
                         <Box sx={{display:'flex', width: '100%', justifyContent: 'flex-start'}}>
                             <Place onClick={() => {
                                 if (url.length != 0) {
